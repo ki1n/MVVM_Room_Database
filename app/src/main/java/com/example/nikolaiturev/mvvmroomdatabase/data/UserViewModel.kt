@@ -18,7 +18,7 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         readAllData = repository.readAllData
     }
 
-    suspend fun addUser(user: User) {
+     fun addUser(user: User) {
         // Dispatchers.IO используется для фоновых задач, не блокирующих основной поток
         viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(user)
