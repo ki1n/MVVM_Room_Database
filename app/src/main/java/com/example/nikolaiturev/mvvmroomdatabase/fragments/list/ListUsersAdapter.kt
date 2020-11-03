@@ -3,7 +3,7 @@ package com.example.nikolaiturev.mvvmroomdatabase.fragments.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nikolaiturev.mvvmroomdatabase.data.User
+import com.example.nikolaiturev.mvvmroomdatabase.model.User
 import com.example.nikolaiturev.mvvmroomdatabase.databinding.CustomRowBinding
 
 class ListUsersAdapter : RecyclerView.Adapter<MyViewHolder>() {

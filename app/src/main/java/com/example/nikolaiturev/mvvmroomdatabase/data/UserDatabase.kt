@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.nikolaiturev.mvvmroomdatabase.model.User
 
 // entities - сущности, exportSchema - схема экспорта
 @Database(entities = [User::class], version = 1, exportSchema = false)

@@ -1,6 +1,8 @@
-package com.example.nikolaiturev.mvvmroomdatabase.data
+package com.example.nikolaiturev.mvvmroomdatabase.redository
 
 import androidx.lifecycle.LiveData
+import com.example.nikolaiturev.mvvmroomdatabase.data.UserDao
+import com.example.nikolaiturev.mvvmroomdatabase.model.User
 
 class UserRepository(private val userDao: UserDao) {
 
