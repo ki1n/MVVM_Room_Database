@@ -2,9 +2,10 @@ package com.example.nikolaiturev.mvvmroomdatabase.fragments.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nikolaiturev.mvvmroomdatabase.model.User
 import com.example.nikolaiturev.mvvmroomdatabase.databinding.CustomRowBinding
+import com.example.nikolaiturev.mvvmroomdatabase.model.User
 
 class ListUsersAdapter : RecyclerView.Adapter<MyViewHolder>() {
 
@@ -40,6 +41,11 @@ class MyViewHolder(
             firstNameTxt.text = user.firstName
             lastNameTxt.text = user.lastName
             ageTxt.text = user.age.toString()
+
+            rowLayout.setOnClickListener {
+                val action = ListFragmentDirections.actionListFragmentToUpdateFragment(user)
+                it.findNavController().navigate(action)
+            }
         }
     }
 }

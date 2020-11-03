@@ -8,7 +8,7 @@
     tools:context=".fragments.add.AddFragment">
 
     <EditText
-        android:id="@+id/updateFirstName_et"
+        android:id="@+id/addFirstName_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/updateLastName_et"
+        android:id="@+id/addLastName_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -30,10 +30,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateFirstName_et" />
+        app:layout_constraintTop_toBottomOf="@+id/addFirstName_et" />
 
     <EditText
-        android:id="@+id/updateAge_et"
+        android:id="@+id/addAge_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -43,16 +43,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateLastName_et" />
+        app:layout_constraintTop_toBottomOf="@+id/addLastName_et" />
 
     <Button
-        android:id="@+id/update_bt"
+        android:id="@+id/add_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="ADD"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/updateAge_et" />
+        app:layout_constraintTop_toBottomOf="@+id/addAge_et" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

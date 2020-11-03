@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.nikolaiturev.mvvmroomdatabase.R
+import com.example.nikolaiturev.mvvmroomdatabase.databinding.FragmentAddBinding
 import com.example.nikolaiturev.mvvmroomdatabase.model.User
 import com.example.nikolaiturev.mvvmroomdatabase.viewmodel.UserViewModel
-import com.example.nikolaiturev.mvvmroomdatabase.databinding.FragmentAddBinding
 
 class AddFragment : Fragment() {
     private lateinit var binding: FragmentAddBinding
@@ -41,22 +41,21 @@ class AddFragment : Fragment() {
         val lastName = binding.addLastNameEt.text.toString()
         val age = binding.addAgeEt.text
 
-        if (inputCheck(firstName,lastName,age)){
+        if (inputCheck(firstName, lastName, age)) {
             // create User object
-            val user = User(0, firstName,lastName, Integer.parseInt(age.toString()))
+            val user = User(0, firstName, lastName, Integer.parseInt(age.toString()))
             // add data to Database
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
             // Navigate Back
             findNavController().navigate(R.id.action_addFragment_to_listFragment) // переход на дугой фрагмент
-        } else{
+        } else {
             Toast.makeText(requireContext(), "Please fill out all field", Toast.LENGTH_LONG).show()
         }
     }
 
     private fun inputCheck(firstName: String, lastName: String, age: Editable): Boolean {
-        // Класс TextUtils относится к пакету android.text и содержит несколько полезных
-        // и удобных методов для работы с текстом.
+        // Класс TextUtils относится к пакету android.text и содержит несколько полезных и удобных методов для работы с текстом.
         // Проверить, что строка пуста или null можно с помощью метода isEmpty(),
         // указав в параметре строковую переменную.
         return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && age.isEmpty())
